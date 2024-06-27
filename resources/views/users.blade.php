@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     @vite('resources/css/app.css')
 </head>
+
 <body>
     <h1 class="text-center">User login</h1>
     <div class="flex item-center justify-center h-screen">
-        <div class="relative m-2 w-full max-w-md rounded-lg bg-blue-600 px-10 pb-14 pt-12 shadow-md ">
-            <form action="/users" method='GET'>
+        <div class="relative m-2 w-full max-w-md h-96 rounded-lg bg-blue-600 px-10 pb-14 pt-12 shadow-md ">
+            <form action="/users" method='POST'>
+                @csrf
                 <div class="mb-4">
                     <label for="username" class="block text-sm text-white">Student Id / Teacher Id / Email</label>
                     <div class="relative">
@@ -36,9 +39,10 @@
                     Login
                 </button>
                 <a href="/forgot-password" class="block mt-4 text-center text-white">Forget password?</a>
-               
+
             </form>
         </div>
     </div>
 </body>
+
 </html>
